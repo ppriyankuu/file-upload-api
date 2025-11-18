@@ -38,9 +38,9 @@ file-upload/
 4. File is stored under `./uploads/` using a generated UUID + original extension.
 5. Server returns a JSON response:
 ```
-    {
+{
     "url": "/uploads/<generated-filename>"
-    }
+}
 ```
 6. Gin serves the `uploads/` directory as static content, making the file accessible publicly.
 
@@ -67,9 +67,9 @@ curl -X POST -F "file=@example.png" http://localhost:8079/upload
 ```
 Response:
 ```
-    {
+{
     "url": "/uploads/2dfe1f4c-1b5c-4b53-b632.png"
-    }
+}
 ```
 
 #### Notes
